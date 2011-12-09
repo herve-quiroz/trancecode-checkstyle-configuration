@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>org.trancecode</groupId>
+  <artifactId>trancecode-checkstyle-configuration</artifactId>
+  <version>1-SNAPSHOT</version>
+  <packaging>jar</packaging>
+  <name>${project.artifactId}</name>
+
+  <!-- ===================================================================== -->
+
+  <developers>
+
+    <developer>
+      <name>Herve Quiroz</name>
+      <email>herve.quiroz@trancecode.org</email>
+      <timezone>+1</timezone>
+    </developer>
+
+  </developers>
+
+  <!-- ===================================================================== -->
+
+  <repositories>
+
+    <repository>
+      <id>releases.trancecode.org</id>
+      <name>TranceCode repository for release artifacts</name>
+      <url>http://maven.trancecode.org/releases/</url>
+      <releases>
+        <enabled>true</enabled>
+      </releases>
+      <snapshots>
+        <enabled>false</enabled>
+      </snapshots>
+    </repository>
+
+    <repository>
+      <id>snapshots.trancecode.org</id>
+      <name>TranceCode repository for snapshot artifacts</name>
+      <url>http://maven.trancecode.org/snapshots/</url>
+      <releases>
+        <enabled>false</enabled>
+      </releases>
+      <snapshots>
+        <enabled>true</enabled>
+      </snapshots>
+    </repository>
+
+  </repositories>
+
+  <!-- ===================================================================== -->
+
+  <distributionManagement>
+
+    <repository>
+      <id>ssh.trancecode.org</id>
+      <url>scpexe://maven@maven.trancecode.org/home/maven/repository/releases/</url>
+    </repository>
+
+    <snapshotRepository>
+      <id>ssh.trancecode.org</id>
+      <url>scpexe://maven@maven.trancecode.org/home/maven/repository/snapshots/</url>
+      <uniqueVersion>false</uniqueVersion>
+    </snapshotRepository>
+
+  </distributionManagement>
+
+  <!-- ===================================================================== -->
+
+  <build>
+
+    <extensions>
+
+      <extension>
+        <groupId>org.apache.maven.wagon</groupId>
+        <artifactId>wagon-ssh-external</artifactId>
+        <version>2.1</version>
+      </extension>
+
+    </extensions>
+
+  </build>
+
+  <!-- ===================================================================== -->
+
+</project>
