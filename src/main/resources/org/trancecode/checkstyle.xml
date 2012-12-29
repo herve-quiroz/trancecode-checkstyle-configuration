@@ -33,7 +33,9 @@
     <module name="LeftCurly">
       <property name="option" value="nl" />
     </module>
-    <module name="ModifiedControlVariable" />
+    <module name="ModifiedControlVariable">
+      <property name="severity" value="warning" />
+    </module>
     <module name="ModifierOrder" />
     <module name="MultipleVariableDeclarations" />
     <module name="MutableException" />
