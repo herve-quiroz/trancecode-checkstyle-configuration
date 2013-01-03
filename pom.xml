@@ -8,39 +8,18 @@
   <parent>
     <groupId>org.trancecode</groupId>
     <artifactId>trancecode</artifactId>
-    <version>12</version>
+    <version>15</version>
   </parent>
 
-  <groupId>org.trancecode</groupId>
   <artifactId>trancecode-checkstyle-configuration</artifactId>
   <version>1-SNAPSHOT</version>
   <packaging>jar</packaging>
-  <name>${project.artifactId}</name>
-
-  <developers>
-
-    <developer>
-      <name>Herve Quiroz</name>
-      <email>herve.quiroz@trancecode.org</email>
-      <timezone>+1</timezone>
-    </developer>
-
-  </developers>
 
   <repositories>
-
     <repository>
       <id>releases.trancecode.org</id>
-      <name>TranceCode repository for release artifacts</name>
       <url>http://maven.trancecode.org/releases/</url>
-      <releases>
-        <enabled>true</enabled>
-      </releases>
-      <snapshots>
-        <enabled>false</enabled>
-      </snapshots>
     </repository>
-
   </repositories>
 
 </project>
