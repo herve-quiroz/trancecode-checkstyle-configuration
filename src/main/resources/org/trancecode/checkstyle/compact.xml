@@ -64,6 +64,6 @@
     <property name="format" value="[^\*]\s\+$" />
   </module>
   <module name="RegexpMultiline">
-    <property name="format" value="\{\n\n|\n\n\}" />
+    <property name="format" value="\n\n\}" />
   </module>
 </module>
